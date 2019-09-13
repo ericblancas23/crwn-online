@@ -44,9 +44,9 @@ export default class Directory extends Component {
     render() {
         return (
             <div>
-                {this.state.sections.map( sections => (
+                {this.state.sections.map(({title, id, imageUrl}) => (
                     <div>
-                        <MenuItem title={sections.title}/>
+                        <MenuItem key={id} title={title}/>
                     </div>
                 )
                 )}
@@ -54,3 +54,5 @@ export default class Directory extends Component {
         );
     }
 }
+
+
